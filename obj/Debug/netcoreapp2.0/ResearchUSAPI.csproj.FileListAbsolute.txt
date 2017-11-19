@@ -1,0 +1,10 @@
+t:\Programming\Dev\ResearchUS\ResearchUSAPI\bin\Debug\netcoreapp2.0\ResearchUSAPI.deps.json
+t:\Programming\Dev\ResearchUS\ResearchUSAPI\bin\Debug\netcoreapp2.0\ResearchUSAPI.runtimeconfig.json
+t:\Programming\Dev\ResearchUS\ResearchUSAPI\bin\Debug\netcoreapp2.0\ResearchUSAPI.runtimeconfig.dev.json
+t:\Programming\Dev\ResearchUS\ResearchUSAPI\bin\Debug\netcoreapp2.0\ResearchUSAPI.dll
+t:\Programming\Dev\ResearchUS\ResearchUSAPI\bin\Debug\netcoreapp2.0\ResearchUSAPI.pdb
+t:\Programming\Dev\ResearchUS\ResearchUSAPI\obj\Debug\netcoreapp2.0\ResearchUSAPI.csproj.CoreCompileInputs.cache
+t:\Programming\Dev\ResearchUS\ResearchUSAPI\obj\Debug\netcoreapp2.0\ResearchUSAPI.AssemblyInfoInputs.cache
+t:\Programming\Dev\ResearchUS\ResearchUSAPI\obj\Debug\netcoreapp2.0\ResearchUSAPI.AssemblyInfo.cs
+t:\Programming\Dev\ResearchUS\ResearchUSAPI\obj\Debug\netcoreapp2.0\ResearchUSAPI.dll
+t:\Programming\Dev\ResearchUS\ResearchUSAPI\obj\Debug\netcoreapp2.0\ResearchUSAPI.pdb
