@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Cors;
 
 namespace ResearchUSAPI
 {
@@ -27,6 +28,7 @@ namespace ResearchUSAPI
             services.AddEntityFrameworkNpgsql()
                 .AddDbContext<ResearchUSContext>(options =>
                     options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddCors();
             services.AddMvc();
         }
 
@@ -37,6 +39,11 @@ namespace ResearchUSAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(
+                options => options.WithOrigins("http://localhost:3000").AllowAnyMethod()
+            );
+
 
             app.UseMvc();
         }

@@ -8,7 +8,7 @@ using ResearchUSAPI;
 
 namespace ResearchUSAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class UsersController : Controller
     {
         private readonly ResearchUSContext _context;
