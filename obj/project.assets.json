@@ -12595,11 +12595,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "t:\\Programming\\Dev\\ResearchUS\\ResearchUSAPI\\ResearchUSAPI.csproj",
+      "projectUniqueName": "T:\\Programming\\Dev\\ResearchUS\\ResearchUSAPI\\ResearchUSAPI.csproj",
       "projectName": "ResearchUSAPI",
-      "projectPath": "t:\\Programming\\Dev\\ResearchUS\\ResearchUSAPI\\ResearchUSAPI.csproj",
+      "projectPath": "T:\\Programming\\Dev\\ResearchUS\\ResearchUSAPI\\ResearchUSAPI.csproj",
       "packagesPath": "C:\\Users\\Taran\\.nuget\\packages\\",
-      "outputPath": "t:\\Programming\\Dev\\ResearchUS\\ResearchUSAPI\\obj\\",
+      "outputPath": "T:\\Programming\\Dev\\ResearchUS\\ResearchUSAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -11,8 +11,8 @@ using System;
 namespace ResearchUSAPI.Migrations
 {
     [DbContext(typeof(ResearchUSContext))]
-    [Migration("20171119052247_First Migration")]
-    partial class FirstMigration
+    [Migration("20171129034142_Changed userid to user_id")]
+    partial class Changeduseridtouser_id
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,25 @@ namespace ResearchUSAPI.Migrations
             modelBuilder
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                 .HasAnnotation("ProductVersion", "2.0.0-rtm-26452");
+
+            modelBuilder.Entity("ResearchUSAPI.Models.Project", b =>
+                {
+                    b.Property<int>("project_id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("created_on");
+
+                    b.Property<string>("description")
+                        .IsRequired();
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasMaxLength(250);
+
+                    b.HasKey("project_id");
+
+                    b.ToTable("Projects");
+                });
 
             modelBuilder.Entity("ResearchUSAPI.Models.User", b =>
                 {

@@ -6,7 +6,7 @@ namespace ResearchUSAPI.Models
     public class User
     {
         [Key]
-        public int user_id {get;set;}
+        public int id {get;set;}
         [Required]
         [MaxLength(100)]
         public string first_name {get;set;}

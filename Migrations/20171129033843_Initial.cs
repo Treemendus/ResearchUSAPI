@@ -5,15 +5,30 @@ using System.Collections.Generic;
 
 namespace ResearchUSAPI.Migrations
 {
-    public partial class FirstMigration : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Projects",
+                columns: table => new
+                {
+                    project_id = table.Column<int>(type: "int4", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
+                    created_on = table.Column<DateTime>(type: "timestamp", nullable: false),
+                    description = table.Column<string>(type: "text", nullable: false),
+                    name = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Projects", x => x.project_id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
-                    user_id = table.Column<int>(type: "int4", nullable: false)
+                    userid = table.Column<int>(type: "int4", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     created_on = table.Column<DateTime>(type: "timestamp", nullable: false),
                     email = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: false),
@@ -23,12 +38,15 @@ namespace ResearchUSAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.user_id);
+                    table.PrimaryKey("PK_Users", x => x.userid);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Projects");
+
             migrationBuilder.DropTable(
                 name: "Users");
         }

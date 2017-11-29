@@ -27,7 +27,7 @@ namespace ResearchUSAPI.Controllers
         [HttpGet("{id}")]
         public User GetByID(int id)
         {
-            return _context.Users.FirstOrDefault(o => o.user_id == id);
+            return _context.Users.FirstOrDefault(o => o.id == id);
         }
 
         [HttpPost]

@@ -11,9 +11,10 @@ using System;
 namespace ResearchUSAPI.Migrations
 {
     [DbContext(typeof(ResearchUSContext))]
-    partial class ResearchUSContextModelSnapshot : ModelSnapshot
+    [Migration("20171129033843_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,7 +23,7 @@ namespace ResearchUSAPI.Migrations
 
             modelBuilder.Entity("ResearchUSAPI.Models.Project", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("project_id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("created_on");
@@ -34,14 +35,14 @@ namespace ResearchUSAPI.Migrations
                         .IsRequired()
                         .HasMaxLength(250);
 
-                    b.HasKey("id");
+                    b.HasKey("project_id");
 
                     b.ToTable("Projects");
                 });
 
             modelBuilder.Entity("ResearchUSAPI.Models.User", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("userid")
                         .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("created_on");
@@ -60,7 +61,7 @@ namespace ResearchUSAPI.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.HasKey("id");
+                    b.HasKey("userid");
 
                     b.ToTable("Users");
                 });
